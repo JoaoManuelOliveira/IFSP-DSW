@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carregar Alunos com AJAX</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #000000;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #b3b3b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ajaxzinho</h1>
+    <button id="carregar" onclick="carregar()">Carregar Alunos</button>
+    <table id="tabela">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Sexo</th>
+                <th>Idade</th>
+                <th>Curso</th>
+                <th>Ano Cursado</th>
+                <th>Ano de Início</th>
+                <th>Ano de Término</th>
+            </tr>
+        </thead>
+        <tbody id="corpoTabela">
+
+        </tbody>
+    </table>
+
+    <script>
+        function carregar(){
+            let objeto = new XMLHttpRequest();
+            
+            objeto.onreadystatechange = function(){
+                if (objeto.readyState === 4 && objeto.status === 200){
+                    const dados = JSON.parse(objeto.responseText);
+                    enviar(dados);
+                }
+               
+            };
+            objeto.open("GET", "alunos.json", true);
+            objeto.send();
+        }
+        function enviar(dados){
+            const tabela = document.getElementById("corpoTabela");
+            dados.forEach((dado,index) => {
+            tabela.innerHTML += `<tr><td> ${dado.nome} </td><td> ${dado.sexo} </td><td> ${dado.idade} </td><td> ${dado.curso} </td><td> ${dado.anoCursado} </td><td> ${dado.anoInicio} </td><td> ${dado.anoTermino} </td></tr>` ;   
+            });
+                
+            }
+
+    </script>
+    
+</body>
+</html>
