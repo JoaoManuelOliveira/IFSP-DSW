@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Aluguel de Carros</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #cdf0f5;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .Vladimir {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            width: 100%;
+        }
+
+        .altair {
+            background-color: #8A4FFF;
+            padding: 15px;
+            text-align: center;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+        }
+
+        .altair h1 {
+            color: rgb(0, 0, 0);
+            margin: 0;
+            font-size: 24px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .rogerio {
+            width: 100%;
+            max-width: calc(50% - 15px);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        input,
+        select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .glawcia {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .btn {
+            width: 100%;
+            background-color: #90E0D4;
+            color: black;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+            box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+            transition: 500ms;
+        }
+
+        .btn:hover {
+            transform: translateY(-5px);
+        }
+
+        .vidal {
+            padding: 15px;
+            background-color: #ffffffca;
+        }
+
+        .adailton {
+            margin-top: 10px;
+            margin-bottom: 10px;
+            font-size: 18px;
+            color: #8A4FFF;
+            border-bottom: 1px solid #8A4FFF;
+            padding-bottom: 5px;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            color: #000000;
+            font-size: 12px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="Vladimir">
+        <div class="altair">
+            <h1>Formulário de Aluguel de Carros</h1>
+        </div>
+        <h2>Preencha as Informações do Aluguel</h2>
+        <form>
+            <div class="vidal">
+                <h2 class="adailton">Informações do Cliente</h2>
+                <div class="glawcia">
+                    <div class="rogerio">
+                        <label for="nomeCompleto">Nome Completo:</label>
+                        <input type="text" id="nomeCompleto" name="nomeCompleto">
+                    </div>
+                    <div class="rogerio">
+                        <label for="cpf">CPF:</label>
+                        <input type="text" id="cpf" name="cpf">
+                    </div>
+                </div>
+
+                <div class="glawcia">
+                    <div class="rogerio">
+                        <label for="telefone">Telefone:</label>
+                        <input type="text" id="telefone" name="telefone">
+                    </div>
+                    <div class="rogerio">
+                        <label for="email">E-mail:</label>
+                        <input type="email" id="email" name="email">
+                    </div>
+                </div>
+
+                <div class="glawcia">
+                    <div class="rogerio">
+                        <label for="endereco">Endereço:</label>
+                        <input type="text" id="endereco" name="endereco">
+                    </div>
+                    <div class="rogerio">
+                        <label for="estado">Estado:</label>
+                        <select id="estado" name="estado" required>
+                            <option value="" disabled selected>Selecione a Unidade Federativa</option>
+                            <option value="AC">Acre (AC)</option>
+                            <option value="AL">Alagoas(AL)</option>
+                            <option value="AP">Amapá (AP)</option>
+                            <option value="AM">Amazonas (AM)</option>
+                            <option value="BA">Bahia (BA)</option>
+                            <option value="CE">Ceará (CE)</option>
+                            <option value="DF">Distrito Federal</option>
+                            <option value="ES">Espírito Santo (ES)</option>
+                            <option value="GO">Goías (GO)</option>
+                            <option value="MA">Maranhão (MA)</option>
+                            <option value="MT">Mato Grosso (MT)</option>
+                            <option value="MS">Campo Grande (MS)</option>
+                            <option value="MG">Minas Gerais (MG)</option>
+                            <option value="PA">Pará (PA)</option>
+                            <option value="PB">Paraíba (PB)</option>
+                            <option value="PR">Pará (PR)</option>
+                            <option value="PE">Pernambuco (PE)</option>
+                            <option value="PI">Piauí (PI)</option>
+                            <option value="RJ">Rio de Janeiro (RJ)</option>
+                            <option value="RN">Rio Grande do Norte (RN)</option>
+                            <option value="RS">Rio Grande do Sul (RS)</option>
+                            <option value="RO">Rondônia (RO)</option>
+                            <option value="RR">Roraima (RR)</option>
+                            <option value="SC">Santa Catarina (SC)</option>
+                            <option value="SP">São Paulo (SP)</option>
+                            <option value="SE">Sergipe (SE)</option>
+                            <option value="TO">Tocantins (TO)</option>
+
+
+                        </select>
+                    </div>
+                </div>
+
+                <div class="glawcia">
+                    <div class="rogerio">
+                        <label for="dataNascimento">Data de Nascimento:</label>
+                        <input type="date" id="dataNascimento" name="dataNascimento">
+                    </div>
+                    <div class="rogerio">
+                        <label for="estadoCivil">Estado Civil:</label>
+                        <select id="estadoCivil" name="estadoCivil">
+                            <option value="" disabled selected>Selecione</option>
+                            <option value="solteiro">Solteiro</option>
+                            <option value="casado">Casado</option>
+                            <option value="divorciado">Divorciado</option>
+                            <option value="viuvo">Viuvo</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="glawcia">
+                    <div class="rogerio">
+                        <label for="profissao">Profissão:</label>
+                        <input type="text" id="profissao" name="profissao">
+                    </div>
+                    <div class="rogerio">
+                        <label for="salario">Salário:</label>
+                        <input type="number" id="salario" name="salario">
+                    </div>
+                </div>
+            </div>
+
+            <div class="vidal">
+                <h2 class="adailton">
+                    Informações do Carro
+                </h2>
+                <div class="glawcia">
+                    <div class="rogerio">
+                        <label for="modelo">Modelo:</label>
+                        <input type="text" id="modelo" name="modelo">
+                    </div>
+                    <div class="rogerio">
+                        <label for="marcaCar">Marca:</label>
+                        <input type="text" id="marcaCar" name="marcaCar">
+                    </div>
+                </div>
+
+                <div class="glawcia">
+                    <div class="rogerio">
+                        <label for="placa">Placa:</label>
+                        <input type="text" id="placa" name="placa">
+                    </div>
+                    <div class="rogerio">
+                        <label for="cor">Cor:</label>
+                        <input type="text" id="cor" name="cor">
+                    </div>
+                </div>
+
+                <div class="glawcia">
+                    <div class="rogerio">
+                        <label for="ano">Ano:</label>
+                        <input type="number" id="ano" name="ano">
+                    </div>
+                    <div class="rogerio">
+                        <label for="diaria">Valor da Diária(R$):</label>
+                        <input type="number" id="diaria" name="diaria">
+                    </div>
+                </div>
+
+                <div class="vidal">
+                    <h2 class="adailton">
+                        Informações do Aluguel
+                    </h2>
+                    <div class="glawcia">
+                        <div class="rogerio">
+                            <label for="dataInicio">Data de Início:</label>
+                            <input type="date" id="dataInicio" name="dataInicio">
+                        </div>
+                        <div class="rogerio">
+                            <label for="dataTermino">Data de Término:</label>
+                            <input type="date" id="dataTermino" name="dataTermino">
+                        </div>
+                        <div class="glawcia">
+                            <div class="rogerio">
+                                <label for="observacoes">Observações:</label>
+                                <textarea id="observacoes" name="observacoes" rows="4"></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="vidal">
+                        <h2 class="adailton">
+                            Informações da Loja
+                        </h2>
+                        <div class="glawcia">
+                            <div class="rogerio">
+                                <label for="nomeLoja">Nome da Loja:</label>
+                                <input type="text" id="nomeLoja" name="nomeLoja">
+                            </div>
+                            <div class="rogerio">
+                                <label for="endLoja">Endereço da Loja:</label>
+                                <input type="text" id="endLoja" name="endLoja">
+                            </div>
+                            <div class="rogerio">
+                                <label for="telLoja">Telefone da Loja:</label>
+                                <input type="text" id="telLoja" name="telLoja">
+                            </div>
+                            <div class="rogerio">
+                                <label for="emailLoja">E-mail da Loja:</label>
+                                <input type="text" id="emailLoja" name="emailLoja">
+                            </div>
+                        </div>
+
+                        <div class="vidal">
+                            <h2 class="adailton">
+                                Informações do Atendente
+                            </h2>
+                            <div class="glawcia">
+                                <div class="rogerio">
+                                    <label for="nomeAtd">Nome do Atendente:</label>
+                                    <input type="text" id="nomeAtd" name="nomeAtd">
+                                </div>
+                                <div class="rogerio">
+                                    <label for="idAtd">ID do Atendente:</label>
+                                    <input type="text" id="idAtd" name="idAtd">
+                                </div>
+
+                                <button type="submit" class="btn">Finalizar Aluguel</button>
+                            </div>
+                        </div>
+        </form>
+    </div>
+    <footer>
+        © 2024 Javinha IFSP. Todos os direitos reservados. <br>
+        By: João Manuel, João Paulo e João pedro
+    </footer>
+</body>
+
+</html>
