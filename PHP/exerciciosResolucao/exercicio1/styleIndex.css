@@ -1,0 +1,88 @@
+body {
+    font-family: "Courier New", monospace;
+    background-color: #0a0a0a;
+    color: #00ff66;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    flex-direction: column;
+}
+
+.container {
+    text-align: center;
+    padding: 40px;
+    border: 2px solid #00ff66;
+    border-radius: 10px;
+    box-shadow: 0 0 20px #00ff66;
+    background-color: #111;
+}
+
+h1 {
+    font-size: 32px;
+    margin-bottom: 30px;
+    text-shadow: 0 0 10px #00ff66;
+}
+
+label {
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+input[type="number"] {
+    font-size: 18px;
+    padding: 6px 10px;
+    border-radius: 5px;
+    border: 1px solid #00ff66;
+    background-color: #0a0a0a;
+    color: #00ff66;
+    text-align: center;
+}
+
+input[type="number"]:focus {
+    outline: none;
+    box-shadow: 0 0 10px #00ff66;
+}
+
+input[type="submit"] {
+    margin-left: 10px;
+    font-size: 18px;
+    padding: 6px 15px;
+    border-radius: 5px;
+    border: none;
+    background-color: #00ff66;
+    color: #0a0a0a;
+    cursor: pointer;
+    box-shadow: 0 0 10px #00ff66;
+    transition: all 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: #0a0a0a;
+    color: #00ff66;
+    box-shadow: 0 0 20px #00ff66, 0 0 40px #00ff66;
+}
+
+/* Fonte retrô/neon */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+.tabuada-title {
+    font-family: 'Press Start 2P', monospace;
+    font-size: 32px;
+    color: #00ff66;          /* verde neon */
+    text-shadow: 
+        0 0 5px #00ff66, 
+        0 0 10px #00ff66, 
+        0 0 8px #00ff66;    /* glow mais suave */
+    letter-spacing: 2px;
+    text-align: center;
+
+    position: fixed;         /* fixa no topo */
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 0;
+    background-color: #0a0a0a; /* fundo escuro para destacar */
+    z-index: 1000;           /* garante que fique sobre outros elementos */
+}
