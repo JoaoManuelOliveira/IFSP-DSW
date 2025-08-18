@@ -5,6 +5,7 @@ Este repositório reúne os projetos e habilidades desenvolvidas ao longo da min
 - **Java Web**
 - **PHP**
 - **HTML5 & CSS**
+- **JAVASCRIPT**
 
 ---
 
