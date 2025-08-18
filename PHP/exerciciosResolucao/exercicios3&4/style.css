@@ -1,0 +1,116 @@
+body {
+    font-family: 'Arial Black', Arial, sans-serif;
+    background-color: #1c1c1c;
+    color: #eee;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 0;
+}
+
+.titulo {
+    font-size: 36px;
+    color: #f2b632;  /* dourado urbano */
+    text-align: center;
+    margin-bottom: 30px;
+    letter-spacing: 3px;
+    text-shadow: 2px 2px 0 #000;
+}
+
+table {
+    border-collapse: collapse;
+    width: 600px;
+    margin-bottom: 30px;
+    background-color: #2b2b2b;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+}
+
+th, td {
+    padding: 15px;
+    border: 1px solid #444;
+    text-align: center;
+}
+
+th {
+    background-color: #3a3a3a;
+    color: #f2b632;
+    text-transform: uppercase;
+}
+
+tr:nth-child(even) {
+    background-color: #2e2e2e;
+}
+
+tr:hover {
+    background-color: #444;
+    transition: 0.2s;
+}
+
+/* Form e centralização */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    background-color: #2b2b2b;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+}
+
+/* Inputs alinhados */
+input[type="text"], input[type="number"] {
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: 1px solid #555;
+    background-color: #1f1f1f;
+    color: #eee;
+    width: 250px;
+    text-align: center;
+}
+
+input[type="text"]:focus, input[type="number"]:focus {
+    outline: none;
+    border-color: #f2b632;
+}
+
+/* Botões atualizados para azul elétrico */
+.btn, input[type="submit"] {
+    display: inline-block;
+    padding: 12px 25px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+    background-color: #f2b632; /* azul gamer */
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.4);
+    transition: all 0.2s;
+}
+
+.btn:hover, input[type="submit"]:hover {
+    background-color: #f2b632; /* azul mais claro no hover */
+    transform: translateY(-2px);
+}
+
+.btn-remover {
+    display: inline-block;
+    padding: 5px 10px;
+    font-size: 16px;
+    background-color: #c0392b; /* vermelho */
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.btn-remover:hover {
+    background-color: #e74c3c;
+    transform: translateY(-1px);
+}
+
