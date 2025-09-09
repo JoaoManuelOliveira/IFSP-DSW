@@ -1,0 +1,223 @@
+/*basicao para estudar aq*/
+/*
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+.formulario {
+    text-align: center;
+    background-color: rgb(90, 90, 90);
+    border: 2px solid black;
+    border-radius: 10px;
+    width: 25%;
+padding: 20px;
+    margin: 50px auto;
+}
+.nome {
+    text-align: center;
+}
+*/
+
+/* Reset básico */
+/* Reset básico */
+/* Reset básico */
+/* Perguntas */
+/* Reset básico */
+/* Fonte dark/gamer */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&display=swap');
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Orbitron', sans-serif;
+}
+
+/* Fundo */
+body {
+    background: #0d0d0d;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #f1f1f1;
+}
+
+/* Container */
+.geral {
+    background: #1a1a1a;
+    width: 90%;
+    max-width: 750px;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
+}
+
+/* Formulário */
+.formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* Campo Nome */
+.nome {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #aaa;
+    text-align: center;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #333;
+    border-radius: 8px;
+    font-size: 1rem;
+    background: #262626;
+    color: #fff;
+    text-align: center;
+    transition: 0.3s;
+}
+input[type="text"]:focus {
+    border-color: #6c5ce7;
+    outline: none;
+}
+
+/* Cada bloco de pergunta */
+.c1 {
+    background: #262626;
+    padding: 1.5rem;
+    border-radius: 12px;
+    transition: 0.3s;
+    margin-bottom: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.c1:hover {
+    background: #333333;
+}
+
+/* Pergunta */
+.pergunta {
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+    color: #fff;
+    letter-spacing: 1px;
+}
+
+/* Alternativas em duas colunas */
+.c1 label, 
+.c1 input[type="radio"] {
+    cursor: pointer;
+}
+.c1 br {
+    display: none; /* tira a quebra de linha do seu HTML */
+}
+.c1 label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #ddd;
+    font-size: 1rem;
+}
+.c1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* duas colunas */
+}
+.c1 h2, .c1 p {
+    grid-column: span 2; /* pergunta ocupa as duas colunas */
+}
+
+/* Radios */
+input[type="radio"] {
+    accent-color: #6c5ce7;
+    transform: scale(1.1);
+}
+
+/* Botão */
+.botao input[type="submit"] {
+    background: #6c5ce7;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    width: 100%;
+    letter-spacing: 1px;
+}
+.botao input[type="submit"]:hover {
+    background: #4b34b0;
+    transform: scale(1.05);
+}
+
+/* ======= PÁGINA DE RESULTADOS ======= */
+
+/* Corpo do resultado */
+body {
+    background: #0d0d0d;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #f1f1f1;
+    font-family: 'Orbitron', sans-serif;
+    text-align: center;
+}
+
+/* Caixa de resultado */
+.resultado {
+    background: #1a1a1a;
+    padding: 2rem 3rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
+    max-width: 600px;
+    width: 90%;
+    line-height: 1.8;
+}
+
+/* Nome + pontuação */
+.resultado h1 {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    color: #fff;
+    letter-spacing: 2px;
+}
+
+/* Mensagem */
+.resultado p {
+    font-size: 1.2rem;
+    color: #aaa;
+    margin-bottom: 2rem;
+}
+
+/* Botão voltar */
+.resultado a {
+    display: inline-block;
+    text-decoration: none;
+    background: #6c5ce7;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 12px 20px;
+    border-radius: 10px;
+    transition: 0.3s;
+    letter-spacing: 1px;
+}
+.resultado a:hover {
+    background: #4b34b0;
+    transform: scale(1.05);
+}
