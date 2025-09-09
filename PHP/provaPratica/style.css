@@ -1,35 +1,5 @@
-/*basicao para estudar aq*/
-/*
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    margin: 0;
-    padding: 0;
-    align-items: center;
-}
-.formulario {
-    text-align: center;
-    background-color: rgb(90, 90, 90);
-    border: 2px solid black;
-    border-radius: 10px;
-    width: 25%;
-padding: 20px;
-    margin: 50px auto;
-}
-.nome {
-    text-align: center;
-}
-*/
-
-/* Reset básico */
-/* Reset básico */
-/* Reset básico */
-/* Perguntas */
-/* Reset básico */
-/* Fonte dark/gamer */
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&display=swap');
 
-/* Reset */
 * {
     margin: 0;
     padding: 0;
@@ -37,7 +7,6 @@ padding: 20px;
     font-family: 'Orbitron', sans-serif;
 }
 
-/* Fundo */
 body {
     background: #0d0d0d;
     min-height: 100vh;
@@ -47,7 +16,6 @@ body {
     color: #f1f1f1;
 }
 
-/* Container */
 .geral {
     background: #1a1a1a;
     width: 90%;
@@ -64,7 +32,6 @@ body {
     gap: 2rem;
 }
 
-/* Campo Nome */
 .nome {
     font-size: 1.3rem;
     font-weight: 600;
@@ -89,7 +56,6 @@ input[type="text"]:focus {
     outline: none;
 }
 
-/* Cada bloco de pergunta */
 .c1 {
     background: #262626;
     padding: 1.5rem;
@@ -105,7 +71,6 @@ input[type="text"]:focus {
     background: #333333;
 }
 
-/* Pergunta */
 .pergunta {
     text-align: center;
     font-size: 1.2rem;
@@ -115,13 +80,12 @@ input[type="text"]:focus {
     letter-spacing: 1px;
 }
 
-/* Alternativas em duas colunas */
 .c1 label, 
 .c1 input[type="radio"] {
     cursor: pointer;
 }
 .c1 br {
-    display: none; /* tira a quebra de linha do seu HTML */
+    display: none; 
 }
 .c1 label {
     display: flex;
@@ -132,19 +96,16 @@ input[type="text"]:focus {
 }
 .c1 {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* duas colunas */
+    grid-template-columns: 1fr 1fr; 
 }
 .c1 h2, .c1 p {
-    grid-column: span 2; /* pergunta ocupa as duas colunas */
-}
+    grid-column: span 2; 
 
-/* Radios */
 input[type="radio"] {
     accent-color: #6c5ce7;
     transform: scale(1.1);
 }
 
-/* Botão */
 .botao input[type="submit"] {
     background: #6c5ce7;
     color: #fff;
@@ -165,7 +126,6 @@ input[type="radio"] {
 
 /* ======= PÁGINA DE RESULTADOS ======= */
 
-/* Corpo do resultado */
 body {
     background: #0d0d0d;
     min-height: 100vh;
@@ -177,7 +137,6 @@ body {
     text-align: center;
 }
 
-/* Caixa de resultado */
 .resultado {
     background: #1a1a1a;
     padding: 2rem 3rem;
@@ -188,7 +147,6 @@ body {
     line-height: 1.8;
 }
 
-/* Nome + pontuação */
 .resultado h1 {
     font-size: 2rem;
     font-weight: 800;
@@ -197,14 +155,12 @@ body {
     letter-spacing: 2px;
 }
 
-/* Mensagem */
 .resultado p {
     font-size: 1.2rem;
     color: #aaa;
     margin-bottom: 2rem;
 }
 
-/* Botão voltar */
 .resultado a {
     display: inline-block;
     text-decoration: none;
@@ -221,3 +177,4 @@ body {
     background: #4b34b0;
     transform: scale(1.05);
 }
+
