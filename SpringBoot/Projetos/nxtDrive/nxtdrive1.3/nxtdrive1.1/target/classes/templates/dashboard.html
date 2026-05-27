@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>NXT Drive - Dashboard</title>
+	<link rel="stylesheet" th:href="@{/styleDashboard.css}">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;700&family=JetBrains+Mono:wght@400;500;700&family=Syncopate:wght@700&display=swap"
+		rel="stylesheet">
+</head>
+
+<body>
+
+	<header class="topbar">
+		<div class="logo">
+			<img th:src="@{/img/nxtDriveLogo.jpg}" alt="Logo NXT Drive">
+		</div>
+		<h1>NXT DRIVE • Categorias</h1>
+	</header>
+
+	<div class="layout">
+
+		<aside class="sidebar">
+			<h2>Menu</h2>
+			<ul>
+				<li class="active">Categorias</li>
+				<li>Veículos</li>
+				<li>Usuários</li>
+				<li>Configurações</li>
+			</ul>
+			<button class="add-btn" onclick="novaCategoria()">+ Adicionar Categoria</button>
+		</aside>
+
+		<main class="content">
+
+			<div class="card">
+				<h2 class="titulo-centralizado">Categorias cadastradas</h2>
+				<table>
+					<thead>
+						<tr>
+							<th>ID</th>
+							<th>Nome</th>
+							<th>Ações</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr th:each="categoria, iter : ${categorias}">
+							<td th:text="${iter.index + 1}"></td>
+							<td th:text="${categoria.nome}"></td>
+							<td class="acoes">
+								<button type="button" class="edit"
+									th:attr="data-id=${categoria.idCategoria}, data-nome=${categoria.nome}"
+									onclick="abrirEdicao(this)">Editar</button>
+
+								<form method="post" action="/removerCategoria" style="margin: 0;">
+									<input type="hidden" name="idCategoria" th:value="${categoria.idCategoria}" />
+									<button type="submit" class="delete">Excluir</button>
+								</form>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+			<div class="modal-overlay" id="modalOverlay" onclick="fecharForm()"></div>
+
+			<div class="card form-card" id="formCard">
+				<h2 id="formTitulo">Nova categoria</h2>
+				<form method="post" id="categoriaForm">
+					<input type="hidden" name="idCategoria" id="idCategoria">
+					<input type="text" name="nome" id="nome" placeholder="Nome da categoria" required />
+
+					<div class="actions">
+						<button type="submit" class="save" id="botaoSubmit">Salvar</button>
+						<button type="button" class="cancel" onclick="fecharForm()">Cancelar</button>
+					</div>
+				</form>
+			</div>
+
+		</main>
+	</div>
+
+	<script>
+		// Função ativada ao clicar em "+ Adicionar Categoria"
+		function novaCategoria() {
+			document.getElementById("formCard").classList.add("show");
+			document.getElementById("modalOverlay").classList.add("show"); // Mostra o fundo escuro
+			document.getElementById("formTitulo").innerText = "Nova categoria";
+			document.getElementById("idCategoria").value = "";
+			document.getElementById("nome").value = "";
+			document.getElementById("categoriaForm").action = "/adicionarCategoria";
+			document.getElementById("botaoSubmit").innerText = "Salvar";
+		}
+
+		// Função ativada ao clicar no botão "Editar" de alguma linha da tabela
+		function abrirEdicao(botao) {
+			document.getElementById("formCard").classList.add("show");
+			document.getElementById("modalOverlay").classList.add("show"); // Mostra o fundo escuro
+			document.getElementById("formTitulo").innerText = "Editar categoria";
+			document.getElementById("idCategoria").value = botao.getAttribute("data-id");
+			document.getElementById("nome").value = botao.getAttribute("data-nome");
+			document.getElementById("categoriaForm").action = "/editarCategoria";
+			document.getElementById("botaoSubmit").innerText = "Salvar edição";
+		}
+
+		// Função ativada ao clicar em "Cancelar" ou fora do formulário
+		function fecharForm() {
+			document.getElementById("formCard").classList.remove("show");
+			document.getElementById("modalOverlay").classList.remove("show"); // Esconde o fundo escuro
+		}
+	</script>
+</body>
+
+</html>

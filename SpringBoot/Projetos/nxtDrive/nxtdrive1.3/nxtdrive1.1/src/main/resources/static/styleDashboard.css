@@ -1,0 +1,254 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'JetBrains Mono', monospace;
+	/* Fonte estilo código moderno */
+	background: linear-gradient(rgba(0, 0, 0, 0.88), rgba(0, 0, 0, 0.92)), url('https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?q=80&w=1920') center/cover;
+	color: white;
+	min-height: 100vh;
+}
+
+h1,
+h2,
+th {
+	font-weight: 700;
+}
+
+/* HEADER */
+.topbar {
+	display: flex;
+	align-items: center;
+	gap: 20px;
+	padding: 20px 40px;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+	backdrop-filter: blur(10px);
+}
+
+.logo {
+	width: 120px;
+	/* Aumentei a largura para a logo aparecer melhor */
+	height: 55px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+	/* Mantém a imagem dentro dos limites se necessário */
+}
+
+.logo img {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+	/* Ajusta a logo sem distorcer as proporções */
+}
+
+.topbar h1 {
+	font-size: 1.4rem;
+	font-weight: 600;
+}
+
+/* LAYOUT & SIDEBAR */
+.layout {
+	display: flex;
+	height: calc(100vh - 80px);
+}
+
+.sidebar {
+	width: 260px;
+	padding: 25px;
+	border-right: 1px solid rgba(255, 255, 255, 0.08);
+	backdrop-filter: blur(12px);
+}
+
+.sidebar h2 {
+	margin-bottom: 20px;
+	color: #3da9ff;
+}
+
+.sidebar ul {
+	list-style: none;
+}
+
+.sidebar li {
+	padding: 12px;
+	margin-bottom: 10px;
+	border-radius: 10px;
+	cursor: pointer;
+	background: rgba(255, 255, 255, 0.03);
+}
+
+.sidebar li.active {
+	background: rgba(0, 153, 255, 0.2);
+}
+
+.add-btn {
+	margin-top: 20px;
+	width: 100%;
+	padding: 12px;
+	border: none;
+	border-radius: 10px;
+	background: #00b3ff;
+	color: white;
+	cursor: pointer;
+}
+
+/* CONTENT & CARDS */
+.content {
+	flex: 1;
+	padding: 25px;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	overflow-y: auto;
+}
+
+.card {
+	background: rgba(10, 10, 10, 0.75);
+	border: 1px solid rgba(0, 153, 255, 0.18);
+	border-radius: 18px;
+	padding: 20px;
+	backdrop-filter: blur(14px);
+}
+
+.titulo-centralizado {
+	text-align: center;
+}
+
+/* TABLE */
+table {
+	width: 100%;
+	border-collapse: collapse;
+	table-layout: fixed;
+	margin-top: 15px;
+}
+
+th,
+td {
+	padding: 22px 16px;
+	text-align: center;
+	vertical-align: middle;
+}
+
+th {
+	color: #1ea7ff;
+	font-weight: 700;
+	font-size: 20px;
+}
+
+td {
+	font-size: 18px;
+	color: white;
+	border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* BOTOES DA TABELA */
+.acoes {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 12px;
+}
+
+.edit,
+.delete {
+	border: none;
+	border-radius: 10px;
+	padding: 10px 22px;
+	font-size: 15px;
+	font-weight: 600;
+	color: white;
+	cursor: pointer;
+	min-width: 110px;
+	transition: 0.2s;
+}
+
+.edit {
+	background: #003b66;
+}
+
+.delete {
+	background: #730024;
+}
+
+.edit:hover,
+.delete:hover {
+	transform: scale(1.05);
+}
+
+/* FORMS */
+/* FORMS (MODAL FLUTUANTE) */
+.form-card {
+	display: none;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 1000;
+	width: 90%;
+	max-width: 500px;
+	box-shadow: 0 10px 40px rgba(0, 0, 0, 0.8), 0 0 30px rgba(0, 153, 255, 0.2);
+}
+
+.form-card.show {
+	display: block;
+}
+
+/* Fundo escurecido atrás do modal */
+.modal-overlay {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background: rgba(0, 0, 0, 0.7);
+	backdrop-filter: blur(4px);
+	z-index: 999;
+}
+
+.modal-overlay.show {
+	display: block;
+}
+
+#categoriaForm {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+	margin-top: 10px;
+}
+
+input {
+	padding: 14px;
+	border-radius: 10px;
+	border: 1px solid rgba(255, 255, 255, 0.08);
+	background: rgba(255, 255, 255, 0.04);
+	color: white;
+	outline: none;
+}
+
+.actions {
+	display: flex;
+	gap: 10px;
+}
+
+.save,
+.cancel {
+	flex: 1;
+	padding: 12px;
+	border: none;
+	border-radius: 10px;
+	color: white;
+	cursor: pointer;
+}
+
+.save {
+	background: #00b3ff;
+}
+
+.cancel {
+	background: rgba(255, 255, 255, 0.08);
+}
